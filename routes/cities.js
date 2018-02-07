@@ -50,7 +50,7 @@ router.route('/:name').all(function(request, reponse, next) {
 }).get(function(request, response) {
 	var state = cities[request.cityName];
 	if (state) {
-		response.json(state);
+		response.json(state + " opens associated state in browser");
 	} else {
 		response.status(404).json('No state found for ' + request.params.state);
 		// response.json(Object.keys(cities));
